@@ -1,16 +1,189 @@
-# React + Vite
+# D&D Custom Web App — Contexto Completo del Proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción General
 
-Currently, two official plugins are available:
+Estoy desarrollando una plataforma web para un sistema RPG casero llamado “D&D Custom”, creado por una comunidad/mesa de rol liderada por “El Jefe Tejón”.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+La idea es transformar el sistema actual (Excel + HTML monolítico) en una aplicación web moderna, modular y escalable con soporte multijugador y tiempo real.
 
-## React Compiler
+El objetivo NO es crear otro clon de D&D tradicional, sino una plataforma personalizada basada en este universo y sistema propio.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# Estado Actual del Proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Actualmente existen dos implementaciones:
+
+## 1. Archivo Excel (Sistema Maestro)
+Contiene:
+- Fichas de personaje
+- Sistema de atributos
+- Cualidades/habilidades
+- Inventario
+- Equipamiento
+- Sistema de combate
+- Tienda de ítems
+- NPCs
+- Control de batalla
+- Familiar/mascota
+- Reglas implícitas
+
+El Excel tiene:
+- Hasta 6 jugadores
+- Hoja de batalla
+- Hoja de tienda
+- Estadísticas complejas
+- Sistema de rarezas
+- Economía
+- Sistema de supervivencia
+
+---
+
+## 2. HTML Monolítico Funcional
+Existe una aplicación web ya funcional hecha en:
+- HTML
+- CSS
+- JavaScript Vanilla
+- Firebase Realtime Database
+
+Características actuales:
+- Fichas persistentes
+- Guardado automático
+- Multijugador
+- Selector de jugadores
+- Sistema de dados completo
+- Historial de tiradas
+- Inventario
+- Equipamiento
+- Familiar/Mascota
+- Cualidades
+- Tabs dinámicos
+- Estética medieval elaborada
+- Fotos de personaje
+- Firebase realtime sync
+
+El archivo actual es MUY grande y monolítico.
+
+Problemas actuales:
+- Todo está en un único HTML
+- CSS gigante
+- JS mezclado con UI
+- Lógica acoplada
+- Difícil mantenimiento
+- Difícil escalabilidad
+- Difícil agregar nuevas features
+
+IMPORTANTE:
+NO quiero perder la lógica ni funcionalidades del HTML viejo.
+Debe servir como:
+- referencia funcional
+- prototipo
+- documentación viva
+- base visual
+
+---
+
+# Objetivo del Proyecto
+
+Migrar el sistema a arquitectura moderna y escalable.
+
+---
+
+# Stack Planeado
+
+## Frontend
+- React
+- Vite
+- TailwindCSS
+- Zustand
+- React Router
+- Socket.io Client
+
+## Backend
+- Node.js
+- Express
+- Socket.io
+
+## Base de Datos
+Posiblemente:
+- MongoDB Atlas
+
+Antes se usaba:
+- Firebase Realtime Database
+
+---
+
+# Despliegue
+
+Planeado en:
+- Render (frontend + backend)
+
+---
+
+# Funcionalidades Objetivo
+
+## Core
+- Fichas de personaje
+- Sistema de atributos
+- Sistema de combate
+- Dados animados
+- Inventario
+- Equipamiento
+- Tienda de ítems
+- NPCs
+- Familiar/Mascota
+- Guardado persistente
+
+## Multiplayer
+- Salas/lobbies
+- Tiempo real
+- Historial compartido de dados
+- Estado sincronizado
+- Panel del Master
+
+## Futuro
+- Sistema de cuentas
+- Auth
+- Sistema de campañas
+- Marketplace
+- Mejoras visuales
+- Combate en tiempo real
+- Sistema de mapas
+- Chat integrado
+
+---
+
+# Arquitectura Recomendada
+
+Separar en:
+
+## Frontend
+- UI
+- Componentes
+- Estado global
+- Navegación
+- Renderizado
+
+## Backend
+- Reglas
+- Persistencia
+- Multiplayer
+- Socket events
+- Validaciones
+
+## Shared
+- Tipos
+- Modelos
+- Reglas de atributos
+- Utilidades
+
+---
+
+# Estructura Recomendada
+
+```txt
+frontend/
+backend/
+shared/
+docs/
+legacy/
